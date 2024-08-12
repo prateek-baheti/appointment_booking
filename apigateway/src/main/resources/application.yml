@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - uri: http://localhost:8080  # Directly pointing to the service's URI
+          predicates:
+            - Path=/user/**
+
+
+server:
+  port: 9091
