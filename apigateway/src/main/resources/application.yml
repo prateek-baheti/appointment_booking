@@ -4,10 +4,9 @@ spring:
   cloud:
     gateway:
       routes:
-        - uri: http://localhost:8080  # Directly pointing to the service's URI
+        - id: user-service
+          uri: http://localhost:8080  # Directly pointing to the service's URI
           predicates:
-            - Path=/user/**
-
-
+            Path=/user/**
 server:
   port: 9091
